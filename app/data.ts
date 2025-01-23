@@ -114,7 +114,8 @@ export async function deleteContact(id: string) {
     avatar:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDQYd3x_6i-Ebe-a7TWV3h_njhoYs_hRna-Q&s",
     first: "Zanahoria",
-    last: "3000$",
+    last: "",
+    twitter: "3000$",
   },
   {
     avatar:
@@ -127,7 +128,8 @@ export async function deleteContact(id: string) {
     avatar:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoRct5MDKg-tnHxN6JIsWFyFw50v1vOuYPfw&s",
     first: "Manzana",
-    last: "2000$",
+    last: "",
+    twitter: "3000$",
   },
   {
     avatar:
