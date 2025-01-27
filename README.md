@@ -1,147 +1,82 @@
-# Welcome to Remix!
+ [Remix Docs](https://remix.run/docs)
 
-- [Remix Docs](https://remix.run/docs)
+#Descripción
 
-## Development
+Desarrollaremos una aplicación pequeña pero con muchas funciones, que te permitirá llevar un registro de tus contactos. Este tutorial se centra en Remix y no incluye una base de datos ni otras funcionalidades "listas para producción", por lo que podemos centrarnos en aprender Remix. Esperamos que te lleve unos 30 minutos completarlo siguiendo nuestras indicaciones. De lo contrario, es una lectura rápida.
 
-From your terminal:
+## Contenidos
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Características](#características)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
 
-```sh
-npm run dev
-```
+##**Requisitos Previos**
 
-This starts your app in development mode, rebuilding assets on file changes.
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-## Deployment
+Node.js
 
-First, build your app for production:
+npm o yarn
 
-```sh
-npm run build
-```
+Remix
 
-Then run the app in production mode:
+React
 
-```sh
+##**Instalación**
 
-
-Instalación de Dependencias
-Para instalar las dependencias necesarias para el proyecto, sigue estos pasos:
-
-Clona el repositorio a tu máquina local:
-
-bash
-
-Copiar
+###Clona el repositorio:
 git clone https://github.com/AngelaCTTorres/comfama-read-con-remix.git
-Navega al directorio del proyecto:
+cd contact-management-app
 
-bash
+###Instala las dependencias:
 
-Copiar
-cd comfama-read-con-remix
-Instala las dependencias utilizando npm o yarn:
-
-bash
-
-Copiar
 npm install
-o
-
-bash
-
-Copiar
+# o
 yarn install
-Arranque del Proyecto
-Para arrancar el proyecto en modo desarrollo, utiliza el siguiente comando:
 
-bash
+#Uso
 
-Copiar
+###1. Inicia la aplicación:
+
 npm run dev
-o
-
-bash
-
-Copiar
+# o
 yarn dev
-Esto iniciará un servidor de desarrollo y podrás acceder al proyecto en tu navegador en http://localhost:3000.
 
-Conceptos Clave
-Links
-En Remix, los links se utilizan para cargar recursos como hojas de estilo. Puedes definirlos en tu componente utilizando la función links.
+###2. Abre tu navegador y ve a http://localhost:3000 para ver la aplicación en funcionamiento.
 
-tsx
+##Características
 
-Copiar
-import { LinksFunction } from "remix";
+**Registro de Contactos:** Agrega, edita y elimina contactos.
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: appStylesHref },
-];
-Loaders
-Los loaders son funciones que cargan datos en tu aplicación antes de que la página se renderice. Se utilizan para obtener datos del servidor.
+**Interfaz de Usuario Intuitiva:** Utiliza Remix y React para una experiencia de usuario fluida.
 
-tsx
+**Sin Base de Datos:** Este tutorial se centra en Remix, sin una base de datos integrada.
 
-Copiar
-import { LoaderFunction } from "remix";
+#Conceptos Clave
 
-export const loader: LoaderFunction = async () => {
-  const data = await fetchData();
-  return { data };
-};
-Rutas Dinámicas
-Las rutas dinámicas permiten crear rutas que contienen parámetros variables. En Remix, puedes definir rutas dinámicas utilizando corchetes en el nombre del archivo.
+##Links
 
-plaintext
+Los links en React Router se utilizan para navegar entre diferentes rutas de tu aplicación sin recargar la página. El componente <Link> reemplaza las etiquetas <a> tradicionales y permite una navegación fluida y basada en el cliente.
 
-Copiar
-routes
-├── posts
-│   └── $postId.tsx
-Rutas Anidadas
-Las rutas anidadas permiten organizar tu aplicación en una jerarquía de rutas. Utilizan el componente <Outlet /> para renderizar las rutas hijas.
+##Loaders
 
-tsx
+Los loaders se utilizan en Remix para cargar datos antes de renderizar un componente. Esto permite que tu componente tenga todos los datos necesarios antes de ser mostrado.
 
-Copiar
-import { Outlet } from "remix";
+##Rutas Dinámicas
 
-export default function Parent() {
-  return (
-    <div>
-      <h1>Ruta Padre</h1>
-      <Outlet />
-    </div>
-  );
-}
-Componente Outlet
-El componente <Outlet /> se utiliza en rutas padres para renderizar los componentes hijos. Es una forma de definir zonas en tu aplicación donde se cargarán las sub-rutas.
+Las rutas dinámicas en React Router permiten crear rutas con parámetros variables. Esto es útil cuando necesitas que ciertas partes de la URL sean variables.
 
-tsx
+##Rutas Anidadas
 
-Copiar
-import { Outlet } from "remix";
+Las rutas anidadas permiten definir rutas dentro de otras rutas. Esto es útil para estructurar la aplicación de manera jerárquica.
 
-export default function Parent() {
-  return (
-    <div>
-      <h1>Ruta Padre</h1>
-      <Outlet /> {/* Aquí se renderizan los componentes hijos */}
-    </div>
-  );
-}
-npm start
-```
+##Componente Outlet
 
-Now you'll need to pick a host to deploy it to.
+El componente Outlet se usa en rutas anidadas para renderizar el componente de la ruta hija. Actúa como un marcador de posición para los componentes secundarios dentro de la ruta principal.
 
-### DIY
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
 
-Make sure to deploy the output of `remix build`
 
-- `build/server`
-- `build/client`
+
